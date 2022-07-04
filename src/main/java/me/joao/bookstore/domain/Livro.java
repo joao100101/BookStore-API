@@ -9,12 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+@Entity
+@EnableAutoConfiguration
 @Data
 @AllArgsConstructor
-@Entity
 public class Livro implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id

@@ -12,12 +12,14 @@ import javax.persistence.OneToMany;
 
 import lombok.Data;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
-@Data @Entity
+@Data
+@RequiredArgsConstructor
+@Entity
 public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	@NonNull 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -32,4 +34,5 @@ public class Categoria implements Serializable {
 	public Categoria() {
 		super();
 	}
+
 }
