@@ -18,9 +18,9 @@ public class DBService {
 	private LivroRepository livroRepository;
 
 	public void instanceBD() {
-		Categoria cat1 = new Categoria("Informática", "Livro de T.I");
-		Categoria cat2 = new Categoria("Biografia", "Livro Biografico");
-		Categoria cat3 = new Categoria("Ficção Científica", "Livro de ficção");
+		Categoria cat1 = new Categoria("Informática", "Livros de T.I");
+		Categoria cat2 = new Categoria("Biografia", "Livros de Biografia");
+		Categoria cat3 = new Categoria("Ficção Científica", "Livros de ficção");
 
 		Livro l1 = new Livro("Clean Code", "Robert Martin", "Lorem ipsum", cat1);
 		Livro l2 = new Livro("A História de Getúlio Vargas", "Arnaldo Romano", "Lorem ipsum", cat2);
