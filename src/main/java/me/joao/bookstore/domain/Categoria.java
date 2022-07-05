@@ -11,11 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
 @Entity
 public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -23,9 +20,7 @@ public class Categoria implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@NonNull
 	private String nome;
-	@NonNull
 	private String descricao;
 
 	@OneToMany(mappedBy = "categoria")
@@ -33,6 +28,19 @@ public class Categoria implements Serializable {
 
 	public Categoria() {
 		super();
+	}
+
+	public Categoria(Integer id, String nome, String descricao) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+	}
+	public Categoria(String nome, String descricao) {
+		super();
+		this.id = null;
+		this.nome = nome;
+		this.descricao = descricao;
 	}
 
 }

@@ -13,30 +13,25 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 
 @Entity
 @EnableAutoConfiguration
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class Livro implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@NonNull
 	private String titulo;
-	@NonNull
 	private String autor;
-	@NonNull
 	private String texto;
 
 	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
-	@NonNull
 	private Categoria categoria;
 
 	public Livro() {
