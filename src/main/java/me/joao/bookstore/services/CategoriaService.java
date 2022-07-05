@@ -35,12 +35,8 @@ public class CategoriaService {
 
 	public Categoria update(Integer id, CategoriaDTO objDTO) {
 		Categoria obj = findById(id);
-		if (objDTO.getNome() != null) {
-			obj.setNome(objDTO.getNome());
-		}
-		if (objDTO.getDescricao() != null) {
-			obj.setDescricao(objDTO.getDescricao());
-		}
+		if (objDTO.getNome() != null)obj.setNome(objDTO.getNome());
+		if (objDTO.getDescricao() != null)obj.setDescricao(objDTO.getDescricao());
 		return rep.save(obj);
 	}
 
