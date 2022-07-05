@@ -11,24 +11,29 @@ import javax.persistence.ManyToOne;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Entity
 @EnableAutoConfiguration
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class Livro implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	@NonNull
 	private String titulo;
+	@NonNull
 	private String autor;
+	@NonNull
 	private String texto;
 
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
+	@NonNull
 	private Categoria categoria;
 
 	public Livro() {
