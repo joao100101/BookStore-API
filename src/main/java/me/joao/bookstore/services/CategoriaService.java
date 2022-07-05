@@ -42,4 +42,10 @@ public class CategoriaService {
 		}
 		return rep.save(obj);
 	}
+
+	public void delete(Integer id) {
+		findById(id);
+		rep.deleteById(id);
+	}
+	
 }
