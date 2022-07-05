@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,7 @@ public class Livro implements Serializable {
 	@NonNull
 	private String texto;
 
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
 	@NonNull
