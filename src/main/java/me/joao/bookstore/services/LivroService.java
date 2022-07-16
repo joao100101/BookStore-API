@@ -44,6 +44,7 @@ public class LivroService {
 		if(obj.getTitulo() != null)newObj.setTitulo(obj.getTitulo());
 		if(obj.getAutor() != null) newObj.setAutor(obj.getAutor());
 		if(obj.getTexto() != null)newObj.setTexto(obj.getTexto());
+		if(obj.getUrlCapa() != null)newObj.setUrlCapa(obj.getUrlCapa());
 	}
 
 	public Livro create(Integer id_cat, Livro obj) {

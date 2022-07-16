@@ -30,6 +30,7 @@ public class Livro implements Serializable {
 	@NotEmpty(message = "Campo TITULO é requerido.")
 	@Length(min = 3, max = 50, message = "O campo TITULO deve ter entre 3 e 50 caracteres.")
 	private String titulo;
+	private String urlCapa;
 	@NotEmpty(message = "Campo AUTOR é requerido.")
 	@Length(min = 3, max = 50, message = "O campo AUTOR deve ter entre 3 e 50 caracteres.")
 	private String autor;
