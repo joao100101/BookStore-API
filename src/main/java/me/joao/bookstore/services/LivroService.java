@@ -16,35 +16,40 @@ public class LivroService {
 
 	@Autowired
 	private LivroRepository rep;
-	
+
 	@Autowired
 	private CategoriaService catService;
-	
+
 	public Livro findById(Integer id) {
 		Optional<Livro> obj = rep.findById(id);
-		
-		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID: " + id + ", Tipo: " + Livro.class.getName()));
+
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado, ID: " + id + ", Tipo: " + Livro.class.getName()));
 	}
 
 	public List<Livro> findAll(Integer id_cat) {
 		catService.findById(id_cat);
-		
-		return rep.findAllByCategoria(id_cat);		
+
+		return rep.findAllByCategoria(id_cat);
 	}
 
 	public Livro update(Integer id, Livro obj) {
 		Livro newObj = findById(id);
 		updateData(newObj, obj);
-		
+
 		return rep.save(newObj);
-		
+
 	}
 
 	private void updateData(Livro newObj, Livro obj) {
-		if(obj.getTitulo() != null)newObj.setTitulo(obj.getTitulo());
-		if(obj.getAutor() != null) newObj.setAutor(obj.getAutor());
-		if(obj.getTexto() != null)newObj.setTexto(obj.getTexto());
-		if(obj.getUrlCapa() != null)newObj.setUrlCapa(obj.getUrlCapa());
+		if (obj.getTitulo() != null)
+			newObj.setTitulo(obj.getTitulo());
+		if (obj.getAutor() != null)
+			newObj.setAutor(obj.getAutor());
+		if (obj.getTexto() != null)
+			newObj.setTexto(obj.getTexto());
+		if (obj.getUrlCapa() != null)
+			newObj.setUrlCapa(obj.getUrlCapa());
 	}
 
 	public Livro create(Integer id_cat, Livro obj) {

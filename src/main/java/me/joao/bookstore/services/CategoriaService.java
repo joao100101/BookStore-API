@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import me.joao.bookstore.domain.Categoria;
 import me.joao.bookstore.dtos.CategoriaDTO;
 import me.joao.bookstore.repositories.CategoriaRepository;
-import me.joao.bookstore.resources.exceptions.StandardError;
 import me.joao.bookstore.resources.exceptions.ValidationError;
 import me.joao.bookstore.services.exceptions.ObjectNotFoundException;
 
