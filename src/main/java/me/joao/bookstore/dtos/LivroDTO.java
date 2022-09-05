@@ -15,11 +15,13 @@ public class LivroDTO implements Serializable {
 	private Integer id;
 	private String titulo;
 	private String urlCapa;
+	private String autor;
 
 	public LivroDTO(Livro obj) {
 		super();
 		this.id = obj.getId();
 		this.titulo = obj.getTitulo();
 		this.urlCapa = obj.getUrlCapa();
+		this.autor = obj.getAutor();
 	}
 }
