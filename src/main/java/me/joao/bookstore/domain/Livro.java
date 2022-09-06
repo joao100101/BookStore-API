@@ -2,6 +2,7 @@ package me.joao.bookstore.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -36,6 +37,7 @@ public class Livro implements Serializable {
 	private String autor;
 	@NotEmpty(message = "Campo TEXTO é requerido.")
 	@Length(min = 10, message = "O campo TEXTO deve ter no mínimo 10 caracteres.")
+	@Column(columnDefinition="LONGTEXT")
 	private String texto;
 
 	@JsonIgnore
