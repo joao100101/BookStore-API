@@ -3,6 +3,8 @@ package me.joao.bookstore.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import me.joao.bookstore.domain.Livro;
 import me.joao.bookstore.repositories.LivroRepository;
 import me.joao.bookstore.services.exceptions.ObjectNotFoundException;
 
+@Transactional
 @Service
 public class LivroService {
 

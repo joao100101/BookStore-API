@@ -22,11 +22,11 @@ public class DBService {
 		Categoria cat2 = new Categoria("Biografia", "Livros de Biografia");
 		Categoria cat3 = new Categoria("Ficção Científica", "Livros de ficção");
 
-		Livro l1 = new Livro(null, "Clean Code", "Robert Martin", "Lorem ipsum", "", cat1);
-		Livro l2 = new Livro(null, "A História de Getúlio Vargas", "Arnaldo Romano", "", "Lorem ipsum", cat2);
-		Livro l3 = new Livro(null, "O ano em que a terra parou", "Luciano Trigo", "", "Lorem ipsum", cat3);
-		Livro l4 = new Livro(null, "Invasão Alien no Brasil", "Fransergio Soares", "", "Lorem ipsum", cat3);
-		Livro l5 = new Livro(null, "Javascript para iniciantes", "Pedro Baptista", "", "Lorem ipsum", cat1);
+		Livro l1 = new Livro(null, "Clean Code", "Robert Martin", "Lorem ipsum", "Lorem ipsum Lorem ipsum", cat1);
+		Livro l2 = new Livro(null, "A História de Getúlio Vargas", "Arnaldo Romano", "Lorem ipsum Lorem ipsum", "Lorem ipsum", cat2);
+		Livro l3 = new Livro(null, "O ano em que a terra parou", "Luciano Trigo", "Lorem ipsum Lorem ipsum", "Lorem ipsum", cat3);
+		Livro l4 = new Livro(null, "Invasão Alien no Brasil", "Fransergio Soares", "Lorem ipsum Lorem ipsum", "Lorem ipsum", cat3);
+		Livro l5 = new Livro(null, "Javascript para iniciantes", "Pedro Baptista", "Lorem ipsum Lorem ipsum", "Lorem ipsum", cat1);
 
 		cat1.getLivros().addAll(Arrays.asList(l1, l5));
 		cat2.getLivros().addAll(Arrays.asList(l2));
