@@ -50,5 +50,6 @@ public class CategoriaService {
 			throw new me.joao.bookstore.services.exceptions.DataIntegrityViolationException("Categoria nao pode ser deletada, possui livros associados.");
 		}
 	}
+	
 
 }
